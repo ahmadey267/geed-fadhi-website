@@ -105,6 +105,7 @@ h2 {
 .yt-link { display: grid; place-items: center; color: var(--white); line-height: 0; transition: color .2s, transform .2s; }
 .yt-link:hover { color: #ff0033; transform: scale(1.08); }
 .brand { color: var(--white); }
+.brand .logo { width: clamp(80px, 7vw, 100px); }
 .top-nav { display: none; align-items: center; gap: clamp(18px, 2.2vw, 34px); }
 .top-nav a {
   position: relative;
