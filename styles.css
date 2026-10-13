@@ -100,7 +100,10 @@ h2 {
   color: var(--white);
   transition: background .3s, padding .3s;
 }
-.site-header.scrolled { background: rgba(10, 10, 10, .88); backdrop-filter: blur(10px); padding-top: 14px; padding-bottom: 14px; }
+.site-header.scrolled { background: var(--black); padding-top: 14px; padding-bottom: 14px; }
+.header-right { display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); }
+.yt-link { display: grid; place-items: center; color: var(--white); line-height: 0; transition: color .2s, transform .2s; }
+.yt-link:hover { color: #ff0033; transform: scale(1.08); }
 .brand { color: var(--white); }
 .top-nav { display: none; align-items: center; gap: clamp(18px, 2.2vw, 34px); }
 .top-nav a {
@@ -126,20 +129,19 @@ h2 {
   .site-header .menu-btn { display: none; }
 }
 .menu-btn {
-  width: 54px; height: 46px;
+  width: 44px; height: 44px;
   display: flex; flex-direction: column; justify-content: center; gap: 5px;
-  padding: 0 15px;
-  background: rgba(255, 255, 255, .14);
-  border: 1px solid rgba(255, 255, 255, .2);
-  backdrop-filter: blur(6px);
+  padding: 0 8px;
+  background: transparent;
+  border: 0;
   cursor: pointer;
   transition: background .2s;
 }
-.menu-btn:hover { background: var(--red); border-color: var(--red); }
-.menu-btn span { display: block; height: 1.5px; background: var(--white); transition: transform .3s, opacity .3s; }
-.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-btn:hover span { background: var(--red); }
+.menu-btn span { display: block; height: 2px; background: var(--white); transition: transform .3s, opacity .3s, background .2s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .menu {
   position: fixed; inset: 0; z-index: 55;
